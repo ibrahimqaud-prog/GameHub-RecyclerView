@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+    <!-- TOP BAR: search + profile -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp"
+        android:background="@color/dark_gray">
+
+        <EditText
+            android:id="@+id/editSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search games..."
+            android:textColor="@color/white"
+            android:textColorHint="@color/red"
+            android:padding="10dp"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/imgSearchIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/red"
+            android:contentDescription="Search" />
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_profile"
+            app:tint="@color/red"
+            android:contentDescription="Profile" />
+
+    </LinearLayout>
+
+    <!-- GAMES GRID -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerGames"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false" />
+
+    <!-- BOTTOM NAV BAR -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/dark_gray"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/imgHome"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            app:tint="@color/red"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:id="@+id/imgNews"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_news"
+            app:tint="@color/white"
+            android:contentDescription="News" />
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_menu"
+            app:tint="@color/white"
+            android:contentDescription="Menu" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
